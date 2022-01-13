@@ -1,0 +1,130 @@
+.tab {
+  background: hsl(200, 39%, 15%);
+  height: 80vh;
+  resize: vertical;
+  padding-bottom: 2rem;
+}
+
+.tablink.header {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: initial;
+}
+
+.scroll-down {
+  position: relative;
+  cursor: pointer;
+}
+
+.copy {
+  position: relative;
+  background: none;
+}
+
+.copy svg {
+  fill: #fff;
+}
+
+.copy .tooltiptext {
+  visibility: hidden;
+  cursor: initial;
+  position: absolute;
+  width: 140px;
+  z-index: 100;
+  bottom: -2.5rem;
+  left: -3.5rem;  
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.scroll-down .tooltiptext {
+  visibility: hidden;
+  cursor: initial;
+  position: absolute;
+  width: 140px;
+  z-index: 100;
+  right: 3rem;  
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.copy .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.scroll-down .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 35%;
+  left: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+}
+
+.copy:hover .tooltiptext, .scroll-down:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.scroll-down svg {
+    width: 1.1rem;
+}
+
+.tooltiptext {
+  font-size: 0.875rem;
+  background-color: #fff;
+  color: #555;
+  text-align: center;
+  padding: 0.3rem .55rem;
+  border-radius: 6px;
+  font-size: 500;
+}
+
+.tablink.header .mouse,
+.tablink.header .arrow {
+  fill: #fff;
+}
+
+.tablink.header:hover {
+  background: hsl(200, 39%, 15%);
+}
+
+.tablink {
+  background: hsl(200, 39%, 15%);
+  padding: 0.875rem 1.5rem;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tablink.active {
+  background: hsl(200, 35%, 12%);
+}
+
+.tablink:hover {
+  background: hsl(200, 30%, 10%);
+}
+
+.tabcontent {
+  border-top: 5px solid #ccc;
+  animation: fadeEffect 0.3s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
